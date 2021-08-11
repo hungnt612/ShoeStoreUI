@@ -106,8 +106,8 @@ const Home = () => {
   // const [selectedItem, setSelectedItem] = useState(null);
   // const [selectedSize, setSelectedSize] = useState('');
   // const [selectedColor, setSelectedColor] = useState('');
-  const {selectedItem, setSelectedItem} = React.useContext(StoreContext);
-  console.log(selectedItem);
+  // const {selectedItem, setSelectedItem} = React.useContext(StoreContext);
+  // console.log(selectedItem);
   // console.log(trending);
   // const itemOnPress = item => {
   //   console.log(item);

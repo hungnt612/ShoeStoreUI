@@ -25,7 +25,7 @@ type CustomProperties = {
 };
 
 const TrendingSection: React.FC<CustomProperties> = ({item, index}) => {
-  const selectedItem = useContext(StoreContext);
+  // const selectedItem = useContext(StoreContext);
 
   var customStyle = {};
   if (index == 0) {
@@ -33,7 +33,7 @@ const TrendingSection: React.FC<CustomProperties> = ({item, index}) => {
   }
   const pickItem = () => {
     // setSelectedItem((selectedItem = {item}));
-    PickItem({item});
+    // PickItem({item});
     // console.log(selectedItem);
   };
   return (

@@ -1,3 +1,5 @@
+//cai nay se fix sau, tam thoi chuyen sang dung redux
+
 import React, {createContext, useReducer, useState} from 'react';
 import PickItem from './PickItemReducer';
 export const StoreContext = createContext(null);
