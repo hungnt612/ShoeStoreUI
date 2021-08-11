@@ -13,12 +13,14 @@
     "@react-native-community/blur": "^3.6.0",
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.0.4",
+    "@reduxjs/toolkit": "^1.6.1",
     "base-64": "^1.0.0",
     "react": "17.0.1",
     "react-native": "0.64.1",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
-    "react-native-svg": "^12.1.1"
+    "react-native-svg": "^12.1.1",
+    "redux": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
