@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -18,8 +18,10 @@ import TrendingSection from '../components/TrendingSection';
 import RecentlyViewedSection from '../components/RecentlyViewedSection';
 import {BlurView} from '@react-native-community/blur';
 import CustomModal from '../components/CustomModal';
+import store from '../redux/store';
 import {StoreContext} from '../context/Store';
-
+import {useSelector} from 'react-redux';
+import {PickItem, UnPickItem} from '../redux/action/UserAction';
 const DATA = [
   {
     id: 0,
@@ -103,7 +105,9 @@ const Home = () => {
   const [trending, setTrending] = useState(DATA);
   const [recentlyViewed, setRecentlyViewed] = useState(DATA2);
   // const [showAddToBag, setShowAddToBag] = useState(false);
-  // const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
+  const users = useSelector(PickItem);
+
   // const [selectedSize, setSelectedSize] = useState('');
   // const [selectedColor, setSelectedColor] = useState('');
   // const {selectedItem, setSelectedItem} = React.useContext(StoreContext);
@@ -112,7 +116,13 @@ const Home = () => {
   // const itemOnPress = item => {
   //   console.log(item);
   // };
-
+  // useEffect(() => {
+  //   setSelectedItem(store.getState().UserActionReducer);
+  //   console.log(selectedItem);
+  // }, []);
+  if (store.getState().UserActionReducer?.data) {
+    console.log(store.getState().UserActionReducer?.isChosing);
+  }
   const trendingSectionRender = () => {
     return (
       <View style={{height: 260, marginTop: SIZES.radius}}>
@@ -189,18 +199,32 @@ const Home = () => {
       </Text>
       {trendingSectionRender()}
       {recentlySectionRender()}
-      {/* {selectedItem && (
-        <Modal animationType="slide" transparent={true} visible={showAddToBag}>
+      {/* {store.getState().UserActionReducer?.data && (
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={store.getState().UserActionReducer?.isChosing}>
           <BlurView
             style={{
               flex: 1,
               alignItems: 'center',
               justifyContent: 'center',
-            }}
-          />
+            }}>
+            <TouchableOpacity
+              onPress={() => {
+                store.dispatch(UnPickItem());
+                // console.log(users.payload?.UserActionReducer?.isChosing);
+              }}>
+              <Text>Close</Text>
+            </TouchableOpacity>
+          </BlurView>
         </Modal>
       )} */}
-      <CustomModal></CustomModal>
+      {store.getState().UserActionReducer?.data && (
+        <CustomModal
+          item={store.getState().UserActionReducer?.data}
+          visible={store.getState().UserActionReducer?.isChosing}></CustomModal>
+      )}
     </View>
   );
 };

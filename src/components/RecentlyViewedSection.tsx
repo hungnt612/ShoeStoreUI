@@ -14,12 +14,23 @@ import {
 } from 'react-native';
 import {icons, images, theme, COLORS, SIZES, FONTS} from '../constants';
 import {Svg, Polygon} from 'react-native-svg';
-
+import {PickItem} from '../redux/action/UserAction';
+import store from '../redux/store';
+import {useSelector} from 'react-redux';
 const RecentlyViewedSection = (item, index) => {
+  const pickItem = () => {
+    // setSelectedItem((selectedItem = {item}));
+    // PickItem({item});
+    // console.log(selectedItem);
+    store.dispatch(PickItem(item));
+    // store.dispatch(AddToBag(true));
+  };
   return (
     <TouchableOpacity
       style={{flex: 1, flexDirection: 'row'}}
-      onPress={() => console.log('vua xem xong')}>
+      onPress={() => {
+        pickItem();
+      }}>
       <View
         style={{
           flex: 1,

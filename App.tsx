@@ -15,6 +15,8 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/screens/HomeScreen';
 import StoreProvider from './src/context/Store';
+import {connect, Provider} from 'react-redux';
+import store from './src/redux/store';
 
 const theme = {
   ...DefaultTheme,
@@ -29,7 +31,8 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <StoreProvider>
+    // <StoreProvider>
+    <Provider store={store}>
       <NavigationContainer theme={theme}>
         <Stack.Navigator initialRouteName={'Home'}>
           <Stack.Screen
@@ -72,7 +75,8 @@ const App = () => {
         </View>
       </SafeAreaView> */}
       </NavigationContainer>
-    </StoreProvider>
+      {/* // </StoreProvider> */}
+    </Provider>
   );
 };
 

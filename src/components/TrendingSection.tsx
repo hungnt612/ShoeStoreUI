@@ -13,11 +13,15 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import PickItem from '../context/PickItemReducer';
+import {PickItem} from '../redux/action/UserAction';
+import {AddToBag} from '../redux/action/UserAction';
+// import PickItem from '../context/PickItemReducer';
 import CustomModal from './CustomModal';
 import {StoreContext} from '../context/Store';
 import {icons, images, theme, COLORS, SIZES, FONTS} from '../constants';
 import {Svg, Polygon} from 'react-native-svg';
+import store from '../redux/store';
+import {useSelector} from 'react-redux';
 
 type CustomProperties = {
   item: any;
@@ -26,7 +30,7 @@ type CustomProperties = {
 
 const TrendingSection: React.FC<CustomProperties> = ({item, index}) => {
   // const selectedItem = useContext(StoreContext);
-
+  const users = useSelector(PickItem);
   var customStyle = {};
   if (index == 0) {
     customStyle = {marginLeft: SIZES.padding};
@@ -35,6 +39,8 @@ const TrendingSection: React.FC<CustomProperties> = ({item, index}) => {
     // setSelectedItem((selectedItem = {item}));
     // PickItem({item});
     // console.log(selectedItem);
+    store.dispatch(PickItem(item));
+    // store.dispatch(AddToBag(true));
   };
   return (
     <TouchableOpacity
