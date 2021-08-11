@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MobileShoppingAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MobileShoppingAppUITests.m */; };
+		05FA10A99CDB447492111CE2 /* CarmenSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */; };
 		0E92E6FFA175CA5089FD2651 /* libPods-MobileShoppingAppUI-MobileShoppingAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2CB374421D48B74C9A3BA0 /* libPods-MobileShoppingAppUI-MobileShoppingAppUITests.a */; };
+		0F7FB3705E29438182D8DDD0 /* CarmenSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60243572159547DFA70A0168 /* CarmenSans-Regular.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D585525BA6C4EE6E0C238A16 /* libPods-MobileShoppingAppUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE201EF4B27C6A46A5A7EDB1 /* libPods-MobileShoppingAppUI.a */; };
-		0F7FB3705E29438182D8DDD0 /* CarmenSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60243572159547DFA70A0168 /* CarmenSans-Regular.otf */; };
-		FF3FE7557D7248A88C369C97 /* CarmenSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */; };
-		05FA10A99CDB447492111CE2 /* CarmenSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */; };
 		3D4CD2A47CFA44F7B9E25D56 /* CocoGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277A8B6338A34243A666C612 /* CocoGothic-Bold.ttf */; };
 		4EA1D63C44124FB397A8DE0B /* CocoGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 882BD1674F704FA4B59D834D /* CocoGothic.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		D585525BA6C4EE6E0C238A16 /* libPods-MobileShoppingAppUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE201EF4B27C6A46A5A7EDB1 /* libPods-MobileShoppingAppUI.a */; };
+		FF3FE7557D7248A88C369C97 /* CarmenSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,17 +43,17 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MobileShoppingAppUI/main.m; sourceTree = "<group>"; };
 		1D265E3A849E6CA2D2751E29 /* Pods-MobileShoppingAppUI-MobileShoppingAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileShoppingAppUI-MobileShoppingAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileShoppingAppUI-MobileShoppingAppUITests/Pods-MobileShoppingAppUI-MobileShoppingAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1EC7BF2AE2C9D5D57C22016B /* Pods-MobileShoppingAppUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileShoppingAppUI.debug.xcconfig"; path = "Target Support Files/Pods-MobileShoppingAppUI/Pods-MobileShoppingAppUI.debug.xcconfig"; sourceTree = "<group>"; };
+		277A8B6338A34243A666C612 /* CocoGothic-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CocoGothic-Bold.ttf"; path = "../src/assets/fonts/CocoGothic-Bold.ttf"; sourceTree = "<group>"; };
 		5193E4901095D0841977CC1A /* Pods-MobileShoppingAppUI-MobileShoppingAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileShoppingAppUI-MobileShoppingAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileShoppingAppUI-MobileShoppingAppUITests/Pods-MobileShoppingAppUI-MobileShoppingAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60243572159547DFA70A0168 /* CarmenSans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CarmenSans-Regular.otf"; path = "../src/assets/fonts/CarmenSans-Regular.otf"; sourceTree = "<group>"; };
 		6C2CB374421D48B74C9A3BA0 /* libPods-MobileShoppingAppUI-MobileShoppingAppUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileShoppingAppUI-MobileShoppingAppUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MobileShoppingAppUI/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CarmenSans-Thin.otf"; path = "../src/assets/fonts/CarmenSans-Thin.otf"; sourceTree = "<group>"; };
+		882BD1674F704FA4B59D834D /* CocoGothic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = CocoGothic.ttf; path = ../src/assets/fonts/CocoGothic.ttf; sourceTree = "<group>"; };
 		AE201EF4B27C6A46A5A7EDB1 /* libPods-MobileShoppingAppUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileShoppingAppUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CarmenSans-SemiBold.otf"; path = "../src/assets/fonts/CarmenSans-SemiBold.otf"; sourceTree = "<group>"; };
 		CDF975680CD4658DA33D229B /* Pods-MobileShoppingAppUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileShoppingAppUI.release.xcconfig"; path = "Target Support Files/Pods-MobileShoppingAppUI/Pods-MobileShoppingAppUI.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		60243572159547DFA70A0168 /* CarmenSans-Regular.otf */ = {isa = PBXFileReference; name = "CarmenSans-Regular.otf"; path = "../src/assets/fonts/CarmenSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */ = {isa = PBXFileReference; name = "CarmenSans-SemiBold.otf"; path = "../src/assets/fonts/CarmenSans-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */ = {isa = PBXFileReference; name = "CarmenSans-Thin.otf"; path = "../src/assets/fonts/CarmenSans-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		277A8B6338A34243A666C612 /* CocoGothic-Bold.ttf */ = {isa = PBXFileReference; name = "CocoGothic-Bold.ttf"; path = "../src/assets/fonts/CocoGothic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		882BD1674F704FA4B59D834D /* CocoGothic.ttf */ = {isa = PBXFileReference; name = "CocoGothic.ttf"; path = "../src/assets/fonts/CocoGothic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +116,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7DBC2E466F4447AC97CDAD8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60243572159547DFA70A0168 /* CarmenSans-Regular.otf */,
+				CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */,
+				83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */,
+				277A8B6338A34243A666C612 /* CocoGothic-Bold.ttf */,
+				882BD1674F704FA4B59D834D /* CocoGothic.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,19 +172,6 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		7DBC2E466F4447AC97CDAD8F /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				60243572159547DFA70A0168 /* CarmenSans-Regular.otf */,
-				CD4432EEF9AA4937AB76BE8F /* CarmenSans-SemiBold.otf */,
-				83FF9BCDB2A643FFAAE722D2 /* CarmenSans-Thin.otf */,
-				277A8B6338A34243A666C612 /* CocoGothic-Bold.ttf */,
-				882BD1674F704FA4B59D834D /* CocoGothic.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
