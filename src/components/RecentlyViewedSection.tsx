@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import {icons, images, theme, COLORS, SIZES, FONTS} from '../constants';
 import {Svg, Polygon} from 'react-native-svg';
-import {PickItem} from '../redux/action/UserAction';
+import {PickItem} from '../redux/action/ActionWItem';
 import store from '../redux/store';
 import {useSelector} from 'react-redux';
 const RecentlyViewedSection = (item, index) => {

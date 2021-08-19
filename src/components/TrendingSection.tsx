@@ -13,8 +13,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {PickItem} from '../redux/action/UserAction';
-import {AddToBag} from '../redux/action/UserAction';
+import {PickItem} from '../redux/action/ActionWItem';
+// import {AddToBag} from '../redux/action/ActionWItem';
 // import PickItem from '../context/PickItemReducer';
 import CustomModal from './CustomModal';
 import {StoreContext} from '../context/Store';

@@ -1,3 +1,4 @@
 import {combineReducers} from 'redux';
-import UserActionReducer from './UserActionReducer';
-export default combineReducers({UserActionReducer});
+import ActionWItemReducer from './ActionWItemReducer';
+import ActionWCartReducer from './ActionWCartReducer';
+export default combineReducers({ActionWItemReducer, ActionWCartReducer});

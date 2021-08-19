@@ -21,7 +21,7 @@ import CustomModal from '../components/CustomModal';
 import store from '../redux/store';
 import {StoreContext} from '../context/Store';
 import {useSelector} from 'react-redux';
-import {PickItem, UnPickItem} from '../redux/action/UserAction';
+import {PickItem, UnPickItem} from '../redux/action/ActionWItem';
 const DATA = [
   {
     id: 0,
@@ -107,7 +107,7 @@ const Home = () => {
   // const [showAddToBag, setShowAddToBag] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const users = useSelector(PickItem);
-
+  // console.log(images.nikePegasus36);
   // const [selectedSize, setSelectedSize] = useState('');
   // const [selectedColor, setSelectedColor] = useState('');
   // const {selectedItem, setSelectedItem} = React.useContext(StoreContext);
@@ -120,8 +120,8 @@ const Home = () => {
   //   setSelectedItem(store.getState().UserActionReducer);
   //   console.log(selectedItem);
   // }, []);
-  if (store.getState().UserActionReducer?.data) {
-    console.log(store.getState().UserActionReducer?.isChosing);
+  if (store.getState().ActionWItemReducer?.data) {
+    console.log(store.getState().ActionWItemReducer?.isChosing);
   }
   const trendingSectionRender = () => {
     return (
@@ -220,11 +220,25 @@ const Home = () => {
           </BlurView>
         </Modal>
       )} */}
-      {store.getState().UserActionReducer?.data && (
+      {store.getState().ActionWItemReducer?.item && (
         <CustomModal
-          item={store.getState().UserActionReducer?.data}
-          visible={store.getState().UserActionReducer?.isChosing}></CustomModal>
+          item={store.getState().ActionWItemReducer?.item}
+          visible={store.getState().ActionWItemReducer?.isChosing}
+          type=""
+        />
       )}
+      {store.getState().ActionWCartReducer?.cart && (
+        <CustomModal
+          item={store.getState().ActionWCartReducer?.cart}
+          visible={store.getState().ActionWCartReducer?.isShowing}
+          type="ShowCart"
+        />
+      )}
+      {/* position: 'absolute',
+          alignSelf: 'flex-end',
+          // backgroundColor: 'green',
+          right: 14,
+          top: 14, */}
     </View>
   );
 };
