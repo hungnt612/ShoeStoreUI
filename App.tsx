@@ -35,24 +35,23 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const [state, setstate] = useState(false);
-  const renderBag = () => {
-    if (state) {
-      return (
-        <Modal animationType="slide" transparent={true} visible={state}>
-          <BlurView
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            blurType="light"
-            blurAmount={20}
-            reducedTransparencyFallbackColor={COLORS.white}
-          />
-        </Modal>
-      );
-    }
-  };
+
+  // if (state) {
+  //   return (
+  //     <Modal animationType="slide" transparent={true} visible={state}>
+  //       <BlurView
+  //         style={{
+  //           flex: 1,
+  //           alignItems: 'center',
+  //           justifyContent: 'center',
+  //         }}
+  //         blurType="light"
+  //         blurAmount={20}
+  //         reducedTransparencyFallbackColor={COLORS.white}
+  //       />
+  //     </Modal>
+  //   );
+  // }
 
   return (
     // <StoreProvider>
@@ -69,7 +68,11 @@ const App = () => {
                 ...FONTS.navTitle,
               },
               headerLeft: ({onPress}) => (
-                <TouchableOpacity style={{marginLeft: 4}} onPress={onPress}>
+                <TouchableOpacity
+                  style={{marginLeft: 4}}
+                  onPress={() => {
+                    setstate(true);
+                  }}>
                   <Image
                     source={icons.menu}
                     resizeMode="contain"

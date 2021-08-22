@@ -9,6 +9,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   useColorScheme,
   View,
@@ -18,8 +19,8 @@ import {Svg, Polygon} from 'react-native-svg';
 import {BlurView} from '@react-native-community/blur';
 import store from '../redux/store';
 import {UnPickItem} from '../redux/action/ActionWItem';
+import RecentlyViewedSection from './RecentlyViewedSection';
 import {AddToCart, HideCart} from '../redux/action/ActionWCart';
-
 type CustomProperties = {
   item: any;
   visible: boolean;
@@ -81,6 +82,53 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
       return null;
     }
   };
+
+  const renderItemsOnCart = (item, index) => {
+    return (
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          marginVertical: 2,
+          borderBottomWidth: 0.3,
+          borderBottomColor: COLORS.lightGray,
+        }}>
+        <TouchableOpacity
+          style={{flex: 1, flexDirection: 'row'}}
+          onPress={() => {
+            console.log(item);
+          }}>
+          {/* <View></View> */}
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Image
+              source={item.img}
+              resizeMode="contain"
+              style={{width: 100, height: 80}}
+            />
+          </View>
+          <View
+            style={{
+              flex: 1.3,
+              marginLeft: SIZES.radius,
+              justifyContent: 'center',
+              // backgroundColor: 'green',
+            }}>
+            <Text style={{color: COLORS.gray, ...FONTS.body3}}>
+              {item.name}
+            </Text>
+            <Text style={{color: COLORS.black, ...FONTS.h3}}>
+              {item.price} - Size: {item.sizes}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  };
   const saveToBag = () => {
     // var newSize = size;
     // console.log(selectedInfor);
@@ -116,10 +164,127 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
             style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
             onPress={() => {
               store.dispatch(HideCart());
-              console.log(store.getState());
+              console.log(store.getState().ActionWCartReducer?.cart);
               // console.log(users.payload?.UserActionReducer?.isChosing);
             }}
           />
+          <View
+            style={{
+              width: '90%',
+              height: '65%',
+              backgroundColor: COLORS.white,
+              alignItems: 'center',
+            }}>
+            {/* <View>
+              <Text>Cart</Text>
+            </View> */}
+            <View
+              style={{
+                width: '96%',
+                height: '75%',
+                // backgroundColor: 'red',
+                marginVertical: 10,
+              }}>
+              <FlatList
+                showsVerticalScrollIndicator={false}
+                data={store.getState().ActionWCartReducer?.cart}
+                keyExtractor={item => item.id.toString()}
+                renderItem={({item, index}) => renderItemsOnCart(item, index)}
+                // style={{borderBottomWidth: 0.2, borderColor: COLORS.lightGray}}
+              />
+            </View>
+            <View
+              style={{
+                width: '96%',
+                height: 25,
+                // backgroundColor: 'red',
+                flexDirection: 'row',
+              }}>
+              <View
+                style={{
+                  // backgroundColor: 'blue',
+                  width: '50%',
+                  height: '100%',
+                  justifyContent: 'center',
+                }}>
+                <Text style={{}}>Voucher</Text>
+              </View>
+              <View
+                style={{
+                  // backgroundColor: 'green',
+                  width: '50%',
+                  height: '100%',
+                  // flexDirection: 'row-reverse',
+                  alignItems: 'center',
+                }}>
+                <TextInput
+                  style={{
+                    borderWidth: 0.4,
+                    width: '100%',
+                    height: '100%',
+                    borderColor: COLORS.lightGray,
+                  }}
+                  onChangeText={value => {
+                    console.log(value);
+                  }}
+                  // value={number}
+                  placeholder="sadjfgsidufgiasudfgasuid"
+                  // keyboardType="numeric"
+                />
+              </View>
+            </View>
+            <View
+              style={{
+                marginVertical: 6,
+                width: '96%',
+                height: 0.5,
+                backgroundColor: COLORS.lightGray,
+              }}
+            />
+            <View
+              style={{
+                width: '96%',
+                height: 25,
+                // backgroundColor: 'red',
+                flexDirection: 'row',
+                borderBottomWidth: 0.2,
+                borderColor: COLORS.lightGray,
+              }}>
+              <View
+                style={{
+                  // backgroundColor: 'blue',
+                  width: '50%',
+                  height: '100%',
+                  justifyContent: 'center',
+                }}>
+                <Text style={{}}>Total price</Text>
+              </View>
+              <View
+                style={{
+                  // backgroundColor: 'green',
+                  width: '50%',
+                  height: '100%',
+                  flexDirection: 'row-reverse',
+                  alignItems: 'center',
+                }}>
+                <Text>hihi</Text>
+              </View>
+            </View>
+            <TouchableOpacity
+              style={{
+                backgroundColor: COLORS.lightGray,
+                width: '96%',
+                height: 40,
+                marginVertical: 6,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              onPress={() => {
+                console.log('checkout');
+              }}>
+              <Text>Checkout</Text>
+            </TouchableOpacity>
+          </View>
         </BlurView>
       </Modal>
     );
