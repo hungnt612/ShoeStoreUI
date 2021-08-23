@@ -73,7 +73,7 @@ const TrendingSection: React.FC<CustomProperties> = ({item, index}) => {
         ]}>
         <View style={{height: '35%', justifyContent: 'space-between'}}>
           <Text style={{color: COLORS.white, ...FONTS.body4}}>{item.name}</Text>
-          <Text style={{color: COLORS.white, ...FONTS.h3}}>{item.price}</Text>
+          <Text style={{color: COLORS.white, ...FONTS.h3}}>${item.price}</Text>
         </View>
       </View>
       <View

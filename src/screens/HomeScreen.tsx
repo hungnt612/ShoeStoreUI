@@ -29,7 +29,7 @@ const DATA = [
     img: images.nikePegasus36,
     bgColor: '#BF012C',
     type: 'RUNNING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -38,7 +38,7 @@ const DATA = [
     img: images.nikeMetcon5Purple,
     bgColor: '#D39C67',
     type: 'TRAINING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -47,7 +47,7 @@ const DATA = [
     img: images.nikeZoomKobe1Proto,
     bgColor: '#7052A0',
     type: 'BASKETBALL',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
 ];
@@ -59,7 +59,7 @@ const DATA2 = [
     img: images.nikePegasus36,
     bgColor: '#BF012C',
     type: 'RUNNING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -68,7 +68,7 @@ const DATA2 = [
     img: images.nikeMetcon5Purple,
     bgColor: '#D39C67',
     type: 'TRAINING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -77,7 +77,7 @@ const DATA2 = [
     img: images.nikeMetcon6,
     bgColor: '#4eaba6',
     type: 'BASKETBALL',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -86,7 +86,7 @@ const DATA2 = [
     img: images.nikeMetcon3,
     bgColor: '#A69285',
     type: 'TRAINING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
   {
@@ -95,7 +95,7 @@ const DATA2 = [
     img: images.nikeMetconFree,
     bgColor: '#A02E41',
     type: 'TRAINING',
-    price: '$176',
+    price: '176',
     sizes: [5, 6, 7, 8, 9],
   },
 ];

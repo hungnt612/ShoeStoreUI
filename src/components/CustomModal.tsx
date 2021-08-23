@@ -21,6 +21,7 @@ import store from '../redux/store';
 import {UnPickItem} from '../redux/action/ActionWItem';
 import RecentlyViewedSection from './RecentlyViewedSection';
 import {AddToCart, HideCart} from '../redux/action/ActionWCart';
+import _ from 'lodash';
 type CustomProperties = {
   item: any;
   visible: boolean;
@@ -31,8 +32,15 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
   // console.log(item);
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedInfor, setSelectedInfor] = useState({});
+  var _ = require('lodash');
   var SIZE = selectedSize;
-
+  var prices = store.getState().ActionWCartReducer?.cart;
+  var totalPrice = prices.map((item, Number) => {
+    return item.price;
+  });
+  totalPrice = totalPrice.map(Number);
+  var sum = _.sum(totalPrice);
+  console.log(sum);
   const renderSizeSection = () => {
     if (item?.sizes) {
       return (
@@ -122,7 +130,7 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
               {item.name}
             </Text>
             <Text style={{color: COLORS.black, ...FONTS.h3}}>
-              {item.price} - Size: {item.sizes}
+              ${item.price} - Size: {item.sizes}
             </Text>
           </View>
         </TouchableOpacity>
@@ -174,6 +182,15 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
               height: '65%',
               backgroundColor: COLORS.white,
               alignItems: 'center',
+              shadowColor: '#000',
+              shadowOffset: {
+                width: 0,
+                height: 7,
+              },
+              shadowOpacity: 0.5,
+              shadowRadius: 9.5,
+              elevation: 15,
+              borderRadius: 15,
             }}>
             {/* <View>
               <Text>Cart</Text>
@@ -207,7 +224,7 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
                   height: '100%',
                   justifyContent: 'center',
                 }}>
-                <Text style={{}}>Voucher</Text>
+                <Text style={{color: COLORS.black, ...FONTS.h3}}>Voucher</Text>
               </View>
               <View
                 style={{
@@ -257,7 +274,9 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
                   height: '100%',
                   justifyContent: 'center',
                 }}>
-                <Text style={{}}>Total price</Text>
+                <Text style={{color: COLORS.black, ...FONTS.h3}}>
+                  Total price
+                </Text>
               </View>
               <View
                 style={{
@@ -267,7 +286,7 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
                   flexDirection: 'row-reverse',
                   alignItems: 'center',
                 }}>
-                <Text>hihi</Text>
+                <Text style={{color: 'red', ...FONTS.h3}}>$ {sum}</Text>
               </View>
             </View>
             <TouchableOpacity
@@ -278,11 +297,12 @@ const CustomModal: React.FC<CustomProperties> = ({item, visible, type}) => {
                 marginVertical: 6,
                 justifyContent: 'center',
                 alignItems: 'center',
+                borderRadius: 15,
               }}
               onPress={() => {
                 console.log('checkout');
               }}>
-              <Text>Checkout</Text>
+              <Text style={{color: COLORS.black, ...FONTS.h3}}>Checkout</Text>
             </TouchableOpacity>
           </View>
         </BlurView>

@@ -50,7 +50,7 @@ const RecentlyViewedSection = (item, index) => {
           justifyContent: 'center',
         }}>
         <Text style={{color: COLORS.gray, ...FONTS.body3}}>{item.name}</Text>
-        <Text style={{color: COLORS.black, ...FONTS.h3}}>{item.price}</Text>
+        <Text style={{color: COLORS.black, ...FONTS.h3}}>${item.price}</Text>
       </View>
     </TouchableOpacity>
   );

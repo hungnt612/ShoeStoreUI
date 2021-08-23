@@ -11,7 +11,7 @@ const initialValue = {
       id: 0,
       img: 10,
       name: 'Nike Air Zoom',
-      price: '$176',
+      price: '176',
       sizes: 9,
       type: 'RUNNING',
     },
@@ -21,7 +21,7 @@ const initialValue = {
       img: images.nikeMetcon5Purple,
       bgColor: '#D39C67',
       type: 'TRAINING',
-      price: '$176',
+      price: '176',
       sizes: 8,
     },
     {
@@ -30,7 +30,7 @@ const initialValue = {
       img: images.nikeMetcon6,
       bgColor: '#4eaba6',
       type: 'BASKETBALL',
-      price: '$176',
+      price: '176',
       sizes: 6,
     },
     {
@@ -39,7 +39,7 @@ const initialValue = {
       img: images.nikeMetcon3,
       bgColor: '#A69285',
       type: 'TRAINING',
-      price: '$176',
+      price: '176',
       sizes: 7,
     },
     {
@@ -48,7 +48,7 @@ const initialValue = {
       img: images.nikeMetconFree,
       bgColor: '#A02E41',
       type: 'TRAINING',
-      price: '$176',
+      price: '176',
       sizes: 5,
     },
     {
@@ -57,7 +57,7 @@ const initialValue = {
       img: images.nikeMetcon5Purple,
       bgColor: '#D39C67',
       type: 'TRAINING',
-      price: '$176',
+      price: '176',
       sizes: 9,
     },
     {
@@ -66,7 +66,7 @@ const initialValue = {
       img: images.nikeZoomKobe1Proto,
       bgColor: '#7052A0',
       type: 'BASKETBALL',
-      price: '$176',
+      price: '176',
       sizes: 9,
     },
   ],
